@@ -1,6 +1,6 @@
 #! /bin/bash
 # Make Instance Ready for Remote Desktop or RDP
-apt-get update
+sudo apt-get update
 rm -rf w2012 w2012.img w2012.gz ngrok ngrok.zip ng.sh > /dev/null 2>&1
 echo "Download windows files"
 wget -O w2012.gz https://go.aank.me/win/W2012-aank.gz
