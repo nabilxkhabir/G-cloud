@@ -26,7 +26,7 @@ read -p "choose ngrok region: " CRP
 ./ngrok tcp --region $CRP 3388 &>/dev/null &
 clear
 echo Downloading files from aank.me
-apt-get install qemu-system-x86 -y
+sudo apt-get install qemu-system-x86 -y
 echo "Wait..."
 echo "Starting Windows"
 qemu-system-x86_64 -hda w2012.img -m 32G -smp cores=8 -net user,hostfwd=tcp::3388-:3389 -net nic -object rng-random,id=rng0,filename=/dev/urandom -device virtio-rng-pci,rng=rng0 -vga vmware -nographic &>/dev/null &
